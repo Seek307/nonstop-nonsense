@@ -1,0 +1,168 @@
+/* Basic browser reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Website-wide defaults */
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Website header */
+.site-header {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333333;
+  padding: 15px 30px;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.logo-icon {
+  background-color: #c4f45c;
+  color: #121212;
+
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #c4f45c;
+}
+
+/* Main header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Main content */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #888888;
+}
+
+/* Welcome section */
+.welcome {
+  margin-bottom: 40px;
+}
+
+.welcome h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  color: #aaaaaa;
+}
+
+/* Tool card layout */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Individual tool cards */
+.tool-card {
+  background-color: #202020;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 25px;
+
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tool-card h3 {
+  color: #c4f45c;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.tool-card p {
+  color: #aaaaaa;
+}
+
+/* Card hover effect */
+.tool-card:hover {
+  transform: translate(-4px);
+  border-color: #c4f45c;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome h2 {
+    font-size: 1.6rem;
+  }
+
+  .site-header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .main-nav {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}

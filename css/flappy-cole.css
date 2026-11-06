@@ -1,0 +1,213 @@
+/* Main page layout */
+.flappy-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/* Game heading */
+.flappy-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flappy-heading h1 {
+  color: #c4f45c;
+  font-size: 2.2rem;
+}
+
+.flappy-heading p {
+  color: #aaaaaa;
+}
+
+/* Game container */
+.game-container {
+  background-color: #202020;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+/* Game area */
+.game-stage {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Game canvas */
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Game controls */
+.game-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1.5fr;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#start-button {
+  background-color: #c4f45c;
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#start-button:hover {
+  background-color: #d4ff70;
+  transform: translateY(-2px);
+}
+
+#score-display {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #c4f45c;
+}
+
+#high-score-display {
+  color: #c4f45c;
+  font-weight: bold;
+}
+
+.game-instructions {
+  text-align: center;
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  margin: 10px 0 0;
+}
+
+.game-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+#game-status {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  font-weight: bold;
+  text-align: right;
+  min-width: 0;
+}
+
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.audio-control {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.audio-control label {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.audio-control-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.audio-control input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #444;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Chrome, Edge, Safari */
+.audio-control input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #c4f45c;
+    cursor: pointer;
+    border: none;
+}
+
+/* Firefox */
+.audio-control input[type="range"]::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #c4f45c;
+    cursor: pointer;
+    border: none;
+}
+
+#music-mute-button {
+  min-width: 65px;
+  white-space: nowrap;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background: #292929;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#music-mute-button:hover {
+  background: #3a3a3a;
+}
+
+/* Footer */
+footer {
+  padding: 0 0 30px 0;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 12px;
+  }
+
+  .flappy-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .game-controls {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 15px;
+  }
+
+  .audio-controls {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #game-status {
+    text-align: center;
+  }
+}

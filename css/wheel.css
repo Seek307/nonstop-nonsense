@@ -1,0 +1,251 @@
+/* Wheel page layout */
+.wheel-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Page heading */
+.wheel-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.wheel-heading h1 {
+  color: #c4f45c;
+  font-size: 2.2rem;
+}
+
+.wheel-heading p {
+  color: #aaaaaa;
+}
+
+/* Main wheel layout */
+.wheel-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Wheel display */
+.wheel-stage {
+  position: sticky;
+  top: 30px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#wheel-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  /* Spinning animation */
+  transform: rotate(0deg);
+  transition: transform 5.5s cubic-bezier(0.12, 0.8, 0.18, 1);
+}
+
+/* Wheel pointer */
+.wheel-pointer {
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+
+  width: 0;
+  height: 0;
+
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-right: 30px solid #c4f45c;
+
+  z-index: 2;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+/* Spin button */
+.spin-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid #121212;
+
+  background-color: #c4f45c;
+  color: #121212;
+
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.spin-button:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Wheel controls */
+.wheel-controls {
+  background-color: #202020;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 25px;
+  min-width: 0;
+}
+
+.wheel-controls h2 {
+  margin-bottom: 5px;
+}
+
+.wheel-controls > p {
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+/* Option entry form */
+#option-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Option input field */
+#option-input {
+  flex: 1;
+  min-width: 0;
+
+  background-color: #292929;
+  color: #f1f1f1;
+
+  border: 1px solid #444444;
+  border-radius: 8px;
+
+  padding: 12px 14px;
+  font-size: 0.95rem;
+
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Input placeholder text */
+#option-input::placeholder {
+  color: #888888;
+}
+
+/* Highlight input when selected */
+#option-input:focus {
+  border-color: #c4f45c;
+}
+
+/* Add Option button */
+.add-button {
+  background-color: #c4f45c;
+  color: #121212;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 18px;
+
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-button:hover {
+  background-color: #d4ff70;
+  transform: translateY(-2px);
+}
+
+/* Options list */
+#options-list {
+  list-style: none;
+  margin-top: 20px;
+
+  max-height: 300px;
+  overflow-y: auto;
+
+  padding-right: 8px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #555555 #202020;
+}
+
+#options-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #292929;
+  border: 1px solid #383838;
+  border-radius: 8px;
+
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+/* Options list scrollbar */
+#options-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#options-list::-webkit-scrollbar-track {
+  background-color: #202020;
+  border-radius: 10px;
+}
+
+#options-list::-webkit-scrollbar-thumb {
+  background-color: #555555;
+  border-radius: 10px;
+}
+
+#options-list::-webkit-scrollbar-thumb:hover {
+  background-color: #c4f45c;
+}
+
+/* Remove buttons */
+#options-list button {
+  background-color: #383838;
+  color: #f1f1f1;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 6px 12px;
+  margin-left: 12px;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#options-list button:hover {
+  background-color: #a83f3f;
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+
+  .wheel-stage {
+    position: static;
+  }
+
+  .wheel-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .wheel-heading h1 {
+    font-size: 1.8rem;
+  }
+
+}

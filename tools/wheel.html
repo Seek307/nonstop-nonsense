@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wheel Spinner | Nonstop Nonsense</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/wheel.css">
+  
+  <script src="../js/wheel.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-content">
+
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">NN</span>
+        <span>Nonstop Nonsense</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="../index.html#tools">All Tools</a>
+      </nav>
+
+    </div>  
+  </header>
+
+  <main class="wheel-page">
+
+    <section class="wheel-heading">
+      <h1>Wheel of Fate</h1>
+      <p>Can't make a decision? Let fate handle it.</p>
+    </section>
+
+    <section class="wheel-layout">
+      <div class="wheel-stage">
+        <canvas id="wheel-canvas" width="500" height="500"></canvas>
+        <div class="wheel-pointer"></div>
+        <button id="spin-button" class="spin-button">
+          SPIN!
+        </button>
+      </div>
+
+      <div class="wheel-controls">
+        <h2>Wheel Options</h2>
+        <p>Add whatever you want to the wheel.</p>
+
+        <form id="option-form">
+          <input
+            type="text"
+            id="option-input"
+            placeholder="Enter an option..."
+            maxlength="40"
+            required
+          >
+          <button type="submit" class="add-button">
+            Add Option
+          </button>
+        </form>
+
+        <ul id="options-list"></ul>
+        <div id="result" class="wheel-result">
+          Your fate awaits...
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      <small>&copy; 2026 Nonstop Nonsense. All rights reserved. Sound effects provided by ZapSplat.</small>
+    </p>
+  </footer>
+
+</body>
+
+</html>
